@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  NYT App
 //
 //  Created by Nour Araar on 5/21/22.
@@ -7,13 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class MainViewController: UITableViewController {
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
