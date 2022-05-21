@@ -21,7 +21,7 @@ class ArticlesListCoordinator: Coordinator {
     
 
     func start() {
-        navigationController.pushViewController(viewController, animated: false)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
 }

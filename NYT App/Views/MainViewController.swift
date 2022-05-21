@@ -10,7 +10,7 @@ import UIKit
 class MainViewModel {
     var router: MainViewRouter?
     
-    func searchCellDidTapped() {
+    func showSearchDidTapped() {
         router?.showSearchView()
     }
     
@@ -30,6 +30,8 @@ class MainViewModel {
 
 class MainViewController: UITableViewController {
     
+    // MARK -: IBOutlets
+    
     var viewModel: MainViewModel?
     
     
@@ -40,5 +42,28 @@ class MainViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "NYT"
+    }
+    
+    
+    // MARK -: IBActions
+    
+    @IBAction func showSearchDidTapped(_ sender: Any) {
+        viewModel?.showSearchDidTapped()
+    }
+    
+    
+    @IBAction func showMostViewdArticlesDidTapped(_ sender: Any) {
+        viewModel?.showMostViewdArticlesDidTapped()
+    }
+    
+    
+    @IBAction func showMostSharedArticlesDidTapped(_ sender: Any) {
+        viewModel?.showMostSharedArticlesDidTapped()
+    }
+    
+    @IBAction func showMostEmailedArticlesDidTapped(_ sender: Any) {
+        viewModel?.showMostEmailedArticlesDidTapped()
     }
 }
