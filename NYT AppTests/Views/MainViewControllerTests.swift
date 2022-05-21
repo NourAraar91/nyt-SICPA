@@ -32,7 +32,5 @@ class MainViewControllerTests: XCTestCase {
     func test_tableViewShouldHaveTwoSections() {
         XCTAssertEqual(sut.tableView.numberOfSections, 2)
     }
-    
-    
 
 }

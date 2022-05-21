@@ -12,11 +12,22 @@
 		277D5410283927CA0089E957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277D540E283927CA0089E957 /* Main.storyboard */; };
 		277D5412283927CB0089E957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277D5411283927CB0089E957 /* Assets.xcassets */; };
 		277D5415283927CB0089E957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277D5413283927CB0089E957 /* LaunchScreen.storyboard */; };
-		277D5420283927CB0089E957 /* NYT_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D541F283927CB0089E957 /* NYT_AppTests.swift */; };
 		277D542A283927CB0089E957 /* NYT_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D5429283927CB0089E957 /* NYT_AppUITests.swift */; };
 		277D542C283927CB0089E957 /* NYT_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D542B283927CB0089E957 /* NYT_AppUITestsLaunchTests.swift */; };
 		277D543B28392AA90089E957 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D543A28392AA90089E957 /* MainViewControllerTests.swift */; };
 		277D544028392B570089E957 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D543F28392B570089E957 /* MainViewController.swift */; };
+		277D5444283931CE0089E957 /* AppSetupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D5443283931CE0089E957 /* AppSetupTests.swift */; };
+		277D5447283934470089E957 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D5446283934470089E957 /* AppCoordinator.swift */; };
+		277D5449283934680089E957 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D5448283934680089E957 /* Coordinator.swift */; };
+		277D544C283936DB0089E957 /* MainViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D544B283936DB0089E957 /* MainViewRouter.swift */; };
+		277D544F283937B40089E957 /* NavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D544E283937B40089E957 /* NavigationControllerMock.swift */; };
+		277D5451283937F30089E957 /* MainCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D5450283937F30089E957 /* MainCoordinatorTests.swift */; };
+		277D545328393AC10089E957 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D545228393AC10089E957 /* SearchViewController.swift */; };
+		277D545528393B7B0089E957 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D545428393B7B0089E957 /* SearchCoordinator.swift */; };
+		277D545728393D230089E957 /* ArticlesListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D545628393D230089E957 /* ArticlesListCoordinator.swift */; };
+		277D545928393D5F0089E957 /* ArticlesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D545828393D5F0089E957 /* ArticlesListViewController.swift */; };
+		277D545C28393EAA0089E957 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D545B28393EAA0089E957 /* SearchCoordinator.swift */; };
+		277D545E28393F370089E957 /* SearchViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D545D28393F370089E957 /* SearchViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,12 +56,23 @@
 		277D5414283927CB0089E957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		277D5416283927CB0089E957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277D541B283927CB0089E957 /* NYT AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NYT AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		277D541F283927CB0089E957 /* NYT_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_AppTests.swift; sourceTree = "<group>"; };
 		277D5425283927CB0089E957 /* NYT AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NYT AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		277D5429283927CB0089E957 /* NYT_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_AppUITests.swift; sourceTree = "<group>"; };
 		277D542B283927CB0089E957 /* NYT_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		277D543A28392AA90089E957 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		277D543F28392B570089E957 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		277D5443283931CE0089E957 /* AppSetupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetupTests.swift; sourceTree = "<group>"; };
+		277D5446283934470089E957 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		277D5448283934680089E957 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		277D544B283936DB0089E957 /* MainViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRouter.swift; sourceTree = "<group>"; };
+		277D544E283937B40089E957 /* NavigationControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerMock.swift; sourceTree = "<group>"; };
+		277D5450283937F30089E957 /* MainCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTests.swift; sourceTree = "<group>"; };
+		277D545228393AC10089E957 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		277D545428393B7B0089E957 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		277D545628393D230089E957 /* ArticlesListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListCoordinator.swift; sourceTree = "<group>"; };
+		277D545828393D5F0089E957 /* ArticlesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesListViewController.swift; sourceTree = "<group>"; };
+		277D545B28393EAA0089E957 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		277D545D28393F370089E957 /* SearchViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +123,8 @@
 		277D5407283927C90089E957 /* NYT App */ = {
 			isa = PBXGroup;
 			children = (
+				277D544A283936CD0089E957 /* Router */,
+				277D5445283934320089E957 /* Coordinators */,
 				277D543C28392B270089E957 /* Views */,
 				277D5408283927CA0089E957 /* AppDelegate.swift */,
 				277D540A283927CA0089E957 /* SceneDelegate.swift */,
@@ -115,8 +139,10 @@
 		277D541E283927CB0089E957 /* NYT AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				277D545A28393E920089E957 /* Coordinators */,
+				277D544D2839379C0089E957 /* Doubles */,
 				277D543928392A7A0089E957 /* Views */,
-				277D541F283927CB0089E957 /* NYT_AppTests.swift */,
+				277D5443283931CE0089E957 /* AppSetupTests.swift */,
 			);
 			path = "NYT AppTests";
 			sourceTree = "<group>";
@@ -142,8 +168,47 @@
 			isa = PBXGroup;
 			children = (
 				277D543F28392B570089E957 /* MainViewController.swift */,
+				277D545228393AC10089E957 /* SearchViewController.swift */,
+				277D545828393D5F0089E957 /* ArticlesListViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		277D5445283934320089E957 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				277D5446283934470089E957 /* AppCoordinator.swift */,
+				277D5448283934680089E957 /* Coordinator.swift */,
+				277D545428393B7B0089E957 /* SearchCoordinator.swift */,
+				277D545628393D230089E957 /* ArticlesListCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		277D544A283936CD0089E957 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				277D544B283936DB0089E957 /* MainViewRouter.swift */,
+				277D545D28393F370089E957 /* SearchViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		277D544D2839379C0089E957 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				277D544E283937B40089E957 /* NavigationControllerMock.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		277D545A28393E920089E957 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				277D5450283937F30089E957 /* MainCoordinatorTests.swift */,
+				277D545B28393EAA0089E957 /* SearchCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +342,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277D544C283936DB0089E957 /* MainViewRouter.swift in Sources */,
+				277D545328393AC10089E957 /* SearchViewController.swift in Sources */,
+				277D545E28393F370089E957 /* SearchViewRouter.swift in Sources */,
+				277D545928393D5F0089E957 /* ArticlesListViewController.swift in Sources */,
+				277D5447283934470089E957 /* AppCoordinator.swift in Sources */,
+				277D545728393D230089E957 /* ArticlesListCoordinator.swift in Sources */,
 				277D5409283927CA0089E957 /* AppDelegate.swift in Sources */,
+				277D545528393B7B0089E957 /* SearchCoordinator.swift in Sources */,
+				277D5449283934680089E957 /* Coordinator.swift in Sources */,
 				277D540B283927CA0089E957 /* SceneDelegate.swift in Sources */,
 				277D544028392B570089E957 /* MainViewController.swift in Sources */,
 			);
@@ -287,8 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				277D5420283927CB0089E957 /* NYT_AppTests.swift in Sources */,
 				277D543B28392AA90089E957 /* MainViewControllerTests.swift in Sources */,
+				277D545C28393EAA0089E957 /* SearchCoordinator.swift in Sources */,
+				277D5451283937F30089E957 /* MainCoordinatorTests.swift in Sources */,
+				277D5444283931CE0089E957 /* AppSetupTests.swift in Sources */,
+				277D544F283937B40089E957 /* NavigationControllerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +539,6 @@
 				INFOPLIST_FILE = "NYT App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,7 +565,6 @@
 				INFOPLIST_FILE = "NYT App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
