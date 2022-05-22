@@ -12,11 +12,13 @@ class ArticlesListCoordinator: Coordinator {
     private let viewController: UIViewController
     private let navigationController: UINavigationController
     
-     init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController,
+         title: String) {
         self.navigationController = navigationController
-         
-         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-         self.viewController = storyboard.instantiateViewController(withIdentifier: "ArticlesListViewController")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        self.viewController = storyboard.instantiateViewController(withIdentifier: "ArticlesListViewController")
+        self.viewController.title = title
     }
     
 

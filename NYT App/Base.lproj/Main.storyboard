@@ -123,7 +123,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="ymM-sh-ZEX">
                     <connections>
-                        <action selector="showMostViewdArticlesDidTapped:" destination="ei5-uc-9ps" id="YBp-6H-YMs"/>
+                        <action selector="showMostViewdArticlesDidTapped:" destination="ei5-uc-9ps" id="uN6-xD-tal"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="mW7-ZZ-bF7">

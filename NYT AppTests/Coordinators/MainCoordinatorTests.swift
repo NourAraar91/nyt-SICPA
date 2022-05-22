@@ -52,7 +52,7 @@ class MainCoordinatorTests: XCTestCase {
     
     
     func test_showMostViewedTap_shouldPushArticlesListView() throws {
-        sut.showArticlesListView()
+        sut.showArticlesListView(with: [], title: "")
         XCTAssertNotNil(navigationControllerMock.lastPushedViewController
                         as? ArticlesListViewController)
     }

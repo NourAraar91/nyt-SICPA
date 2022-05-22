@@ -9,21 +9,56 @@ import UIKit
 
 class MainViewModel {
     var router: MainViewRouter?
+    let apiClient: APIClinet
+    
+    init(apiClient: APIClinet = APIClinet()) {
+        self.apiClient = apiClient
+    }
     
     func showSearchDidTapped() {
         router?.showSearchView()
     }
     
-    func showMostViewdArticlesDidTapped() {
-        router?.showArticlesListView()
+    func showMostViewdArticlesDidTapped()  {
+        router?.loading(show: true, completion: nil)
+        Task.init {
+            do {
+                let articles = try await apiClient.fetchMostViewedArticles()
+                DispatchQueue.main.async {
+                    self.router?.showArticlesListView(with: articles, title: "Most Viewed")
+                }
+            } catch {
+                router?.showError(error: error)
+            }
+        }
     }
     
     func showMostSharedArticlesDidTapped() {
-        router?.showArticlesListView()
+        router?.loading(show: true, completion: nil)
+        Task.init {
+            do {
+                let articles = try await apiClient.fetchMostSharedArticles()
+                DispatchQueue.main.async {
+                    self.router?.showArticlesListView(with: articles,  title: "Most Shared")
+                }
+            } catch {
+                router?.showError(error: error)
+            }
+        }
     }
     
     func showMostEmailedArticlesDidTapped() {
-        router?.showArticlesListView()
+        router?.loading(show: true, completion: nil)
+        Task.init {
+            do {
+                let articles = try await apiClient.fetchMostEmailedArticles()
+                DispatchQueue.main.async {
+                    self.router?.showArticlesListView(with: articles,  title: "Most Emailed")
+                }
+            } catch {
+                router?.showError(error: error)
+            }
+        }
     }
 }
 
