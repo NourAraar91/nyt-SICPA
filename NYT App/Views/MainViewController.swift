@@ -78,7 +78,7 @@ class MainViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "NYT"
+        self.title = "The New Yourk Times"
     }
     
     
