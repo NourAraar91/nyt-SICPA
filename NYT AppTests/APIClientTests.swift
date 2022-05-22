@@ -21,7 +21,7 @@ class APIClientTests: XCTestCase {
     }
     
     func test_mostViewedArticles_shouldFetchesArticles() async throws {
-        let url = try XCTUnwrap(URL(string: "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json"))
+        let url = try XCTUnwrap(URL(string: "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=\(Secrets.appKey)"))
         let urlSessionMock = URLSessionProtocolMock()
         let expected = ArticlesResponse(results: [Article(title: "dummy title")])
         urlSessionMock.dataForDelegateReturnValue = (
@@ -79,7 +79,7 @@ class APIClientTests: XCTestCase {
     
     
     func test_mostEmailedArticles_shouldFetchesArticles() async throws {
-        let url = try XCTUnwrap(URL(string: "https://api.nytimes.com/svc/mostpopular/v2/emailed/1.json"))
+        let url = try XCTUnwrap(URL(string: "https://api.nytimes.com/svc/mostpopular/v2/emailed/1.json?api-key=\(Secrets.appKey)"))
         let urlSessionMock = URLSessionProtocolMock()
         let expected = ArticlesResponse(results: [Article(title: "dummy title")])
         urlSessionMock.dataForDelegateReturnValue = (
@@ -92,7 +92,6 @@ class APIClientTests: XCTestCase {
         sut.session = urlSessionMock
         
         let items = try await sut.fetchMostEmailedArticles()
-        
         XCTAssertEqual(items, expected.results)
         XCTAssertEqual(urlSessionMock.dataForDelegateRequest,
                        URLRequest(url: url))
@@ -100,7 +99,7 @@ class APIClientTests: XCTestCase {
     
     
     func test_mostSharedArticles_shouldFetchesArticles() async throws {
-        let url = try XCTUnwrap(URL(string: "https://api.nytimes.com/svc/mostpopular/v2/shared/1.json"))
+        let url = try XCTUnwrap(URL(string: "https://api.nytimes.com/svc/mostpopular/v2/shared/1.json?api-key=\(Secrets.appKey)"))
         let urlSessionMock = URLSessionProtocolMock()
         let expected = ArticlesResponse(results: [Article(title: "dummy title")])
         urlSessionMock.dataForDelegateReturnValue = (
@@ -121,7 +120,7 @@ class APIClientTests: XCTestCase {
     
     
     func test_searchArticles_shouldFetchesArticles() async throws {
-        let url = try XCTUnwrap(URL(string: "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=cats"))
+        let url = try XCTUnwrap(URL(string: "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=cats&api-key=\(Secrets.appKey)"))
         let urlSessionMock = URLSessionProtocolMock()
         let expected = ArticlesResponse(results: [Article(title: "dummy title")])
         urlSessionMock.dataForDelegateReturnValue = (
