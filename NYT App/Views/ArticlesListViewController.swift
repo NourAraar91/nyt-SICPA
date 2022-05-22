@@ -66,12 +66,14 @@ class ArticlesListViewController: UIViewController {
     
     
     private func update(with articles: [Article]) {
-      var snapshot =
-      NSDiffableDataSourceSnapshot<Section, Article>()
-      snapshot.appendSections([.main])
-      snapshot.appendItems( articles,
-                            toSection: .main)
-      dataSource?.apply(snapshot)
+        var snapshot =
+        NSDiffableDataSourceSnapshot<Section, Article>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems( articles,
+                              toSection: .main)
+        dataSource?.apply(snapshot)
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
     
 }

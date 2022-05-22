@@ -9,4 +9,6 @@ import Foundation
 
 protocol SearchViewRouter {
     func showArticlesListView(articles: [Article], title: String)
+    func loading(show: Bool, completion: (() -> Void)?)
+    func showError(error: Error)
 }

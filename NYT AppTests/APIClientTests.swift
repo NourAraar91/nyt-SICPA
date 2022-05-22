@@ -122,7 +122,18 @@ class APIClientTests: XCTestCase {
     func test_searchArticles_shouldFetchesArticles() async throws {
         let url = try XCTUnwrap(URL(string: "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=cats&api-key=\(Secrets.appKey)"))
         let urlSessionMock = URLSessionProtocolMock()
-        let expected = ArticlesResponse(results: [Article(title: "dummy title")])
+        let expected = ArticlesSearchResponse(response: Response(docs: [ArticleSearch(id: "1",
+                                                                                      abstract: "abstract",
+                                                                                      webURL: "url",
+                                                                                      snippet: "snippet",
+                                                                                      leadParagraph: "leadParagraph",
+                                                                                      source: "source",
+                                                                                      multimedia: [],
+                                                                                      pubDate: "",
+                                                                                      headline:
+                                                                                        Headline(main: "")
+                                                                                     )
+                                                                       ]))
         urlSessionMock.dataForDelegateReturnValue = (
             try JSONEncoder().encode(expected),
             HTTPURLResponse(url: url,
@@ -134,7 +145,7 @@ class APIClientTests: XCTestCase {
         
         let items = try await sut.searchFor(keyword: "cats")
         
-        XCTAssertEqual(items, expected.results)
+        XCTAssertEqual(items, expected.response.docs)
         XCTAssertEqual(urlSessionMock.dataForDelegateRequest,
                        URLRequest(url: url))
     }

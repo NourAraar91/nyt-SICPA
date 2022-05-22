@@ -13,14 +13,14 @@ class ArticleTableViewCellViewModel {
     let title: String
     let date: String
     let abstract: String
-    let coverURL: String
+    let coverURL: String?
     
     init (artical: Article) {
         self.artical = artical
         self.title = artical.title ?? ""
         self.date = artical.publishedDate ?? ""
         self.abstract = artical.abstract ?? ""
-        self.coverURL = artical.cover ?? ""
+        self.coverURL = artical.cover
     }
 }
 
@@ -36,7 +36,12 @@ class ArticleTableViewCell: UITableViewCell {
             titleLable.text = viewModel?.title
             dateLabel.text = viewModel?.date
             abstractLabel.text = viewModel?.abstract
-            coverImageView.load(from: viewModel?.coverURL ?? "")
+            if let coverURL = viewModel?.coverURL {
+                coverImageView.load(from: coverURL)
+            } else {
+                coverImageView.isHidden = true
+            }
+            
         }
     }
     

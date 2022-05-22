@@ -16,44 +16,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="354"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The Weekender: Leave the sweats at Home." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ows-Lv-Dcj">
-                        <rect key="frame" x="16" y="12" width="288" height="84"/>
-                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="28"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ah9-JQ-fvN">
-                        <rect key="frame" x="16" y="106" width="288" height="14"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU1-Ql-hL8">
-                        <rect key="frame" x="16" y="130" width="288" height="19"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhb-RC-NBX">
-                        <rect key="frame" x="0.0" y="147" width="320" height="180"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="hhb-RC-NBX" secondAttribute="height" multiplier="16:9" id="C7W-Uc-dM4"/>
-                        </constraints>
-                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Pz-bT-tRB">
+                        <rect key="frame" x="16" y="12" width="288" height="326"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The Weekender: Leave the sweats at Home." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ows-Lv-Dcj">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="101"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="28"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ah9-JQ-fvN">
+                                <rect key="frame" x="0.0" y="111" width="288" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU1-Ql-hL8">
+                                <rect key="frame" x="0.0" y="135" width="288" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhb-RC-NBX">
+                                <rect key="frame" x="0.0" y="164" width="288" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hhb-RC-NBX" secondAttribute="height" multiplier="16:9" id="C7W-Uc-dM4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ah9-JQ-fvN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="2Pn-Tw-MSw"/>
-                    <constraint firstItem="bU1-Ql-hL8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="452-Td-dwN"/>
-                    <constraint firstAttribute="trailing" secondItem="ows-Lv-Dcj" secondAttribute="trailing" constant="16" id="CJC-N1-uVQ"/>
-                    <constraint firstItem="hhb-RC-NBX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JrP-6g-PGh"/>
-                    <constraint firstItem="bU1-Ql-hL8" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="L0F-wk-7en"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="hhb-RC-NBX" secondAttribute="bottom" constant="16" id="Ogs-n6-yHu"/>
-                    <constraint firstAttribute="trailing" secondItem="ah9-JQ-fvN" secondAttribute="trailing" constant="16" id="VXs-eG-Xw8"/>
-                    <constraint firstItem="ah9-JQ-fvN" firstAttribute="top" secondItem="ows-Lv-Dcj" secondAttribute="bottom" constant="10" id="Y9k-Rg-s2E"/>
-                    <constraint firstItem="ows-Lv-Dcj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="YgF-2t-ZbL"/>
-                    <constraint firstItem="hhb-RC-NBX" firstAttribute="top" secondItem="bU1-Ql-hL8" secondAttribute="bottom" constant="16" id="aFn-gf-Kdj"/>
-                    <constraint firstItem="bU1-Ql-hL8" firstAttribute="top" secondItem="ah9-JQ-fvN" secondAttribute="bottom" constant="10" id="dlC-wr-A66"/>
-                    <constraint firstAttribute="trailing" secondItem="hhb-RC-NBX" secondAttribute="trailing" id="gg6-rR-vSC"/>
-                    <constraint firstItem="ows-Lv-Dcj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="t65-2Z-xPY"/>
+                    <constraint firstItem="0Pz-bT-tRB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="A6Z-Cs-NOI"/>
+                    <constraint firstAttribute="bottom" secondItem="0Pz-bT-tRB" secondAttribute="bottom" constant="16" id="crX-5U-a7R"/>
+                    <constraint firstItem="0Pz-bT-tRB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="vOz-xH-aKE"/>
+                    <constraint firstAttribute="trailing" secondItem="0Pz-bT-tRB" secondAttribute="trailing" constant="16" id="xFK-54-vAr"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

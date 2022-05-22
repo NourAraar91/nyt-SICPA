@@ -54,14 +54,14 @@ class APIClinet {
         return articlesResponse.results
     }
 
-    func searchFor(keyword: String) async throws -> [Article] {
+    func searchFor(keyword: String) async throws -> [ArticleSearch] {
         guard let url = URL(string: "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=\(keyword)&api-key=\(Secrets.appKey)")
         else { return [] }
         
         let request = URLRequest(url: url)
         
         let (data, _) = try await session.data(for: request, delegate: nil)
-        let articlesResponse = try JSONDecoder().decode(ArticlesResponse.self, from: data)
-        return articlesResponse.results
+        let articlesResponse = try JSONDecoder().decode(ArticlesSearchResponse.self, from: data)
+        return articlesResponse.response.docs
     }
 }
