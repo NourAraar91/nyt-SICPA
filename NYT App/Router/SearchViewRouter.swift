@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SearchViewRouter {
-    func showArticlesListView()
+    func showArticlesListView(articles: [Article], title: String)
 }

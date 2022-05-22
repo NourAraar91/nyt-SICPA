@@ -24,7 +24,7 @@ class ActivityLoader {
 
     func show(on viewController: UIViewController,
               completion: (() -> Void)? = nil) {
-        if isLoading {return}
+        if isLoading { return }
         isLoading = true
         viewController.present(loader, animated: true, completion: completion)
     }

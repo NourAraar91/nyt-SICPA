@@ -9,15 +9,19 @@ import UIKit
 
 
 class ArticlesListCoordinator: Coordinator {
-    private let viewController: UIViewController
+    private let viewController: ArticlesListViewController
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController,
+         articles: [Article],
          title: String) {
         self.navigationController = navigationController
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        self.viewController = storyboard.instantiateViewController(withIdentifier: "ArticlesListViewController")
+        self.viewController = storyboard.instantiateViewController(withIdentifier: "ArticlesListViewController") as! ArticlesListViewController
+        let viewModel = ArticlesListViewModel(articles: articles)
+        self.viewController.setViewModel(viewModel)
+        viewModel.router = self
         self.viewController.title = title
     }
     
@@ -28,3 +32,11 @@ class ArticlesListCoordinator: Coordinator {
     
 }
 
+
+extension ArticlesListCoordinator: ArticalListRouter {
+    func openURL(_ url: String) {
+        if let url = URL(string: url) {
+            UIApplication.shared.open(url)
+        }
+    }
+}

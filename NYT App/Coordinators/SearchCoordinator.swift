@@ -35,8 +35,10 @@ class SearchCoordinator: Coordinator {
 
 extension SearchCoordinator: SearchViewRouter {
     
-    func showArticlesListView() {
-        let articlesListCoordinator = ArticlesListCoordinator(navigationController: navigationController, title: "")
+    func showArticlesListView(articles: [Article], title: String) {
+        let articlesListCoordinator = ArticlesListCoordinator(navigationController: navigationController,
+                                                              articles: articles,
+                                                              title: title)
         articlesListCoordinator.start()
     }
 }

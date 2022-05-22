@@ -35,6 +35,10 @@
 		277D546B2839AF0C0089E957 /* URLSessionProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D546A2839AF0C0089E957 /* URLSessionProtocolMock.swift */; };
 		277D546D2839B7AC0089E957 /* ActivityLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D546C2839B7AC0089E957 /* ActivityLoader.swift */; };
 		277D5471283A0A460089E957 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D5470283A0A460089E957 /* Secrets.swift */; };
+		277D5479283A24370089E957 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D5477283A24370089E957 /* ArticleTableViewCell.swift */; };
+		277D547A283A24370089E957 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277D5478283A24370089E957 /* ArticleTableViewCell.xib */; };
+		277D547D283A27A90089E957 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D547C283A27A90089E957 /* UIImageView+Ext.swift */; };
+		277D547F283A30810089E957 /* ArticalesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277D547E283A30810089E957 /* ArticalesListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		277D546A2839AF0C0089E957 /* URLSessionProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocolMock.swift; sourceTree = "<group>"; };
 		277D546C2839B7AC0089E957 /* ActivityLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLoader.swift; sourceTree = "<group>"; };
 		277D5470283A0A460089E957 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		277D5477283A24370089E957 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		277D5478283A24370089E957 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		277D547C283A27A90089E957 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		277D547E283A30810089E957 /* ArticalesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticalesListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,8 @@
 		277D5407283927C90089E957 /* NYT App */ = {
 			isa = PBXGroup;
 			children = (
+				277D547B283A27960089E957 /* Extensions */,
+				277D5472283A21260089E957 /* Cells */,
 				277D546F283A0A3C0089E957 /* Common */,
 				277D54672839AC1C0089E957 /* Models */,
 				277D54612839AA630089E957 /* Network */,
@@ -206,6 +216,7 @@
 			children = (
 				277D544B283936DB0089E957 /* MainViewRouter.swift */,
 				277D545D28393F370089E957 /* SearchViewRouter.swift */,
+				277D547E283A30810089E957 /* ArticalesListRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -270,6 +281,23 @@
 				277D5470283A0A460089E957 /* Secrets.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		277D5472283A21260089E957 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				277D5477283A24370089E957 /* ArticleTableViewCell.swift */,
+				277D5478283A24370089E957 /* ArticleTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		277D547B283A27960089E957 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				277D547C283A27A90089E957 /* UIImageView+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277D547A283A24370089E957 /* ArticleTableViewCell.xib in Resources */,
 				277D5415283927CB0089E957 /* LaunchScreen.storyboard in Resources */,
 				277D5412283927CB0089E957 /* Assets.xcassets in Resources */,
 				277D5410283927CA0089E957 /* Main.storyboard in Resources */,
@@ -410,11 +439,14 @@
 				277D546D2839B7AC0089E957 /* ActivityLoader.swift in Sources */,
 				277D545E28393F370089E957 /* SearchViewRouter.swift in Sources */,
 				277D545928393D5F0089E957 /* ArticlesListViewController.swift in Sources */,
+				277D547F283A30810089E957 /* ArticalesListRouter.swift in Sources */,
 				277D5447283934470089E957 /* MainCoordinator.swift in Sources */,
 				277D545728393D230089E957 /* ArticlesListCoordinator.swift in Sources */,
+				277D547D283A27A90089E957 /* UIImageView+Ext.swift in Sources */,
 				277D5409283927CA0089E957 /* AppDelegate.swift in Sources */,
 				277D54632839AA6F0089E957 /* APIClinet.swift in Sources */,
 				277D545528393B7B0089E957 /* SearchCoordinator.swift in Sources */,
+				277D5479283A24370089E957 /* ArticleTableViewCell.swift in Sources */,
 				277D5449283934680089E957 /* Coordinator.swift in Sources */,
 				277D540B283927CA0089E957 /* SceneDelegate.swift in Sources */,
 				277D544028392B570089E957 /* MainViewController.swift in Sources */,

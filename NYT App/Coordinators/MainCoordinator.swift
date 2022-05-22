@@ -46,7 +46,9 @@ extension MainCoordinator: MainViewRouter {
     }
     
     func showArticlesListView(with articles: [Article], title: String) {
-        let articlesListCoordinator = ArticlesListCoordinator(navigationController: navigationController, title: title)
+        let articlesListCoordinator = ArticlesListCoordinator(navigationController: navigationController,
+                                                              articles: articles,
+                                                              title: title)
         activityLoader.stop {
             articlesListCoordinator.start()
         }

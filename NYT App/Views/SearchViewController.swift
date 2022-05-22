@@ -12,7 +12,7 @@ class SearchViewModel {
     var router: SearchViewRouter?
     
     func searchButtonTapped() {
-        router?.showArticlesListView()
+        router?.showArticlesListView(articles: [], title: "")
     }
 }
 

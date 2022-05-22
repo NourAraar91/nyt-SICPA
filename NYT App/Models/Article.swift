@@ -20,18 +20,34 @@ struct ArticlesResponse: Codable {
 
 }
 
-// MARK: - Result
-struct Article: Codable, Equatable {
-    let publishedDate: String?
-    let title: String?
+// MARK: - Article
+struct Article: Codable, Equatable, Hashable {
+    let url: String?
+    let source, publishedDate, nytdsection, byline: String?
+    let title, abstract: String?
+    let media: [Media]?
+    
+    var cover: String? {
+        return media?.first?.data?[1].url
+    }
 
     enum CodingKeys: String, CodingKey {
+        case url, source
         case publishedDate = "published_date"
-        case title
+        case nytdsection, byline, title, abstract, media
     }
-    
-    init(title: String, publishedDate: String? = nil) {
-        self.title = title
-        self.publishedDate = publishedDate
+}
+
+// MARK: - Media
+struct Media: Codable, Equatable, Hashable {
+    let data: [MediaData]?
+
+    enum CodingKeys: String, CodingKey {
+        case data = "media-metadata"
     }
+}
+
+// MARK: - MediaMetadatum
+struct MediaData: Codable, Equatable, Hashable {
+    let url: String?
 }

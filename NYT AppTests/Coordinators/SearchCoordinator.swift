@@ -38,7 +38,7 @@ class SearchCoordinatorTests: XCTestCase {
     
     
     func test_searchButtonTapped_shouldPushArticlesListView() throws {
-        sut.showArticlesListView()
+        sut.showArticlesListView(articles: [], title: "")
         XCTAssertNotNil(navigationControllerMock.lastPushedViewController
                         as? ArticlesListViewController)
     }
